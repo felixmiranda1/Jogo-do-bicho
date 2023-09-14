@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* Define estilos globais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+/* Define variáveis CSS para cores */
+:root {
+  --purple: #7d179c;
+  --dark:  #12172a;
+  --green: #5ea897;
+}
+
+/* Estilos do corpo da página */
+
+body {
+  color: var(--green);
+  background: var(--dark);
+}
+
+/* Estilos da barra de navegação */
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 18px 40px;
+
+  box-shadow: 0 0.1rem 0.5rem #ccc;
+
+  width: 100%;
+
+  background: var(--dark);
+
+  transition: all 0.5s;
+
+  position: fixed;
+}
+
+.navigation .logo {
+  color: var(--purple);
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+.logo span {
+  color: var(--green);
+}
+
+.navigation ul {
+  display: flex;
+  align-items: center;
+  gap: 5rem; /* Define o espaço entre os itens flexíveis */
+}
+
+/* Estilos dos links na barra de navegação */
+.navigation ul li a {
+  color: var(--green);
+  font-size: 17px;
+  font-weight: 500;
+  transition: all 0.5s;
+}
+
+/* Estilos dos links na barra de navegação ao passar o mouse */
+.navigation ul li a:hover {
+  color: var(--purple);
+}
+
+/* Estilos do ícone de pesquisa */
+.navigation i {
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+/* Estilos do ícone do menu para dispositivos móveis */
+.menu {
+  cursor: pointer;
+  display: none;
+}
+
+.menu .bar {
+  display: block;
+  width: 28px;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--green);
+  margin: 5px auto;
+  transition: all 0.3s;
+}
+
+/* Estilos dos elementos do ícone do menu */
+.menu .bar:nth-child(1),
+.menu .bar:nth-child(3) {
+  background: var(--purple);
+}
+
+.text-h2 {
+  font-size: 1.5rem;
+  color: var(--purple);
+  margin-bottom: 1rem;
+}
+/* Estilos da seção "home" */
+.home {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 10%;
+}
+
+/* Estilos do texto na seção "home" */
+.home-text {
+  max-width: 37rem;
+}
+
+.home-text .text-h4 {
+  font-size: 1.5rem;
+  color: var(--purple);
+  margin-bottom: 1rem;
+}
+
+.home-text .text-h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  line-height: 4rem;
+  color: var(--green)
+}
+
+.home-text p {
+  margin-bottom: 4rem;
+}
+
+/* Estilos do botão na seção "home" */
+.home-btn {
+  padding: 15px 45px;
+  background: var(--purple);
+  color: var(--dark);
+  border-radius: 10px;
+  font-weight: 700;
+  transition: all 0.5s;
+}
+
+/* Estilos do botão na seção "home" ao passar o mouse */
+.home-btn:hover {
+  background: #5ea897;
+  color: var(--purple);
+}
+
+/* Estilos da imagem na seção "home" */
+.home-img img {
+  width: 100%;
+  opacity: 0.7;
+  box-shadow: #5ea897;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition-duration: 2s;
+}
+
+/* Estilos para telas menores (mídia responsiva) */
+@media (max-width: 785px) {
+  /* Estilos para a barra de navegação em telas menores */
+  .navigation {
+    padding: 18px 20px;
+  }
+
+  /* Estilos do ícone do menu ativo em telas menores */
+  .menu {
+    display: block;
+  }
+
+  .menu.ativo .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .menu.ativo .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu.ativo .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* Estilos para a lista de navegação em telas menores */
+  .nav-menu {
+    position: fixed;
+    right: -100%;
+    top: 70px;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    background: var(--dark);
+    gap: -10px;
+    transition: 0.3s;
+  }
+
+  /* Estilos para a lista de navegação ativa em telas menores */
+  .nav-menu.ativo {
+    right: 0;
+  }
+
+  /* Estilos dos itens de navegação em telas menores */
+  .nav-item {
+    margin: 16px 0;
+  }
+
+  /* Estilos para a seção "home" em telas menores */
+  .home {
+    padding: 100px 2%;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+    gap: 5rem;
+  }
+
+  .home .text-h4 {
+    font-size: 15px;
+  }
+
+  .home .text-h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 3rem;
+  }
+
+  .home p {
+    font-size: 15px;
+  }
+
+  /* Estilos para a imagem na seção "home" em telas menores */
+  .home-img {
+    opacity: 0.9;
+    box-shadow: #5ea897;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-duration: 2s;
+  }
+}
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+h1 {
+  color: var(--green);
+}
+
+form {
+  display: inline-block;
+  text-align: left;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f7f7f7;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="tel"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="radio"] {
+  margin: 5px;
+}
+
+input[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #555;
+}
+
+.back-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 5px 10px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Jogo do bicho</title>
+  </head>
+
+<body>
+    <a href="index.html" class="back-button">Voltar</a>
+    <h1>Formulário</h1>
+    <form action="processar.php" method="post">
+        <label for="nome">Nome:</label><br>
+        <input type="text" id="nome" name="nome" required><br><br>
+
+        <label for="telefone">Telefone:</label><br>
+        <input type="tel" id="telefone" name="telefone" required><br><br>
+
+        <label for="sexo">Sexo:</label><br>
+        <input type="radio" id="masculino" name="sexo" value="Masculino" required>
+        <label for="masculino">Masculino</label>
+        <input type="radio" id="feminino" name="sexo" value="Feminino" required>
+        <label for="feminino">Feminino</label><br><br>
+
+        <label for="cidade">Cidade:</label><br>
+        <input type="text" id="cidade" name="cidade" required><br><br>
+
+        <label for="bicho_da_sorte">Bicho da Sorte:</label><br>
+        <select id="bicho_da_sorte" name="bicho_da_sorte" required>
+            <option value="Selecione" selected>Selecione</option>
+            <option value="Leão">Leão</option>
+            <option value="Tigre">Tigre</option>
+            <option value="Elefante">Elefante</option>
+            <option value="Girafa">Girafa</option>
+            <option value="Urso Polar">Urso Polar</option>
+            <option value="Panda">Panda</option>
+            <option value="Gorila">Gorila</option>
+            <option value="Leopardo">Leopardo</option>
+            <option value="Zebra">Zebra</option>
+            <option value="Rinoceronte">Rinoceronte</option>
+            <option value="Hipopótamo">Hipopótamo</option>
+            <option value="Crocodilo">Crocodilo</option>
+            <option value="Baleia Azul">Baleia Azul</option>
+            <option value="Porco">Porco</option>
+            <option value="Águia">Águia</option>
+            <option value="Lobo Cinzento">Lobo Cinzento</option>
+            <option value="Pinguim">Pinguim</option>
+            <option value="Tubarão Branco">Tubarão Branco</option>
+            <option value="Guepardo">Guepardo</option>
+            <option value="Raposa">Raposa</option>
+        </select><br><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
